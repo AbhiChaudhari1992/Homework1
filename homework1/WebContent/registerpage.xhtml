@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"></link>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</h:head>
+<h:body class="container"> 
+<h:form class="form-signin">
+<h1 align="center">Register</h1>
+<p align="center">All fields are required</p>
+<h:outputLabel for="firstname" class="lebal" value="First Name" title="first Name"></h:outputLabel>
+<h:inputText id="firstname" value="#{registerBean.firstName}" required="true" requiredMessage="*Please enter First Name" class="form-control"/>
+<h:message id="m12" for="firstname" style="color.red"></h:message><p></p>
+<h:outputLabel for="lname" class="lebal" value="Last Name" title="first Name"></h:outputLabel>
+<h:inputText id="lname" value="#{registerBean.lastName}" required="true" requiredMessage="*Please enter Last Name" class="form-control"/>
+<h:message id="m123" for="lname" style="color.red"></h:message><p></p>
+<h:outputLabel for="add" class="lebal" value="Address" title="Address"></h:outputLabel>
+<h:inputText id="add" value="#{registerBean.address}" required="true" requiredMessage="*Please enter Address" class="form-control"/>
+<h:message id="m321" for="add" style="color.red"></h:message><p></p>
+<h:outputLabel for="email" class="lebal" value="Email" title="Email ID"></h:outputLabel>
+<h:inputText id="email" value="#{registerBean.email}" required="true" requiredMessage="*Please enter Email ID" class="form-control"/>
+<h:message id="m124" for="email" style="color.red"></h:message><p></p>
+<h:outputLabel for="ph" class="lebal" value="Phone Number" title="Phone Num"></h:outputLabel>
+<h:inputText id="ph" value="#{registerBean.phoneNum}" required="true" requiredMessage="*Please enter Phone Number" class="form-control"/>
+<h:message id="m1243" for="ph" style="color.red"></h:message><p></p>
+<h:outputLabel for="user" class="lebal" value="User Name" title="UserName"></h:outputLabel>
+<h:inputText id="user" value="#{registerBean.userName}" required="true" requiredMessage="*Please enter User Name" class="form-control"/>
+<h:message id="m13" for="user" style="color.red"></h:message><p></p>
+<h:outputLabel for="pass" class="lebal" value="Password" title="Password"></h:outputLabel>
+<h:inputSecret id="pass" value="#{registerBean.passWord}" required="true" requiredMessage="*Please enter the Password" class="form-control"/>
+<h:message id="m212" for="pass" style="color.red"></h:message><p></p>
+<h:commandButton value="Submit" action="successreg"></h:commandButton>
+</h:form>
+</h:body>
+</html>

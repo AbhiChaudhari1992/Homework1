@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"></link>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</h:head>
+<h:body class="container"> 
+<h:form class="form-signin">
+<h1 align="center">Sign-In</h1>
+<h:outputLabel for="fname" class="lebal" value="UserName" title="First Name"></h:outputLabel>
+<h:inputText id="fname" value="#{signInBean.username}" required="true" requiredMessage="*Please enter Username" class="form-control"/>
+<h:message id="m2" for="fname" style="color.red"></h:message><p></p>
+<h:outputLabel for="fname" class="lebal" value="Password" title="First Name"></h:outputLabel>
+<h:inputSecret id="pass" value="#{signInBean.password}" required="true" requiredMessage="*Please enter the Password" class="form-control"/>
+<h:message id="m3" for="pass" style="color.red"></h:message><p></p>
+<h:commandButton value="Submit" action="#{signInBean.successP}"></h:commandButton>
+</h:form>
+</h:body>
+</html>
